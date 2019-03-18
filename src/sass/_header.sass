@@ -1,0 +1,205 @@
+// header styles
+.header
+  position: absolute
+  top: 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  margin-top: 25px
+  padding: 20px 50px
+  z-index: 999
+  transition: background-color 300ms, box-shadow 300ms
+  +r(1320)
+    padding: 20px 30px
+  +r(1023)
+    justify-content: flex-end
+  &.fixed
+    position: fixed
+    margin-top: 0
+    background-color: rgba(#fff, 0.9)
+    box-shadow: 0 0 10px 5px $brown
+    .menu
+      a
+        color: $gray
+        &:hover, &:active, &.is-active
+          color: $brown
+    .select .select-trigger, .select.selected .select-trigger
+      color: $gray
+    .menu-btn
+      span
+        background-color: $gray
+        &:before, &:after
+          background-color: $gray
+
+.logo
+  margin: 0 25px
+  max-width: 60px
+  height: auto
+  +r(1320)
+    margin: 0
+  +r(1023)
+    position: absolute
+    left: 20px
+
+.menu
+  +r(1023)
+    display: none
+  &.is-open
+    display: block
+    position: absolute
+    top: 80px
+    right: 30px
+    min-width: 200px
+    background-color: #FFF
+    text-align: right
+    +r(580)
+      width: 50%
+    +r(480)
+      width: 80%
+    ul
+      flex-direction: column
+      a
+        color: $gray
+        &:hover, &:active, &.is-active
+          color: $brown
+  ul
+    display: flex
+    flex-direction: row
+    li
+      padding: 25px 40px
+      +r(1280)
+        padding: 20px 10px
+      a
+        position: relative
+        padding: 0 5px
+        display: block
+        text-transform: uppercase
+        color: #FFF
+        transition: color 300ms
+        &:active, &:hover, &.is-active
+          color: $l-brown
+          &:before
+            width: 100%
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          bottom: 3px
+          width: 0
+          height: 1px
+          background-color: $brown
+          opacity: 0.5
+          transition: width 300ms
+
+.menu-btn
+  display: none
+  padding: 30px 20px
+  margin: -30px -20px
+  &:hover
+    span
+      &:before
+        transform: translateX(6px)
+      &:after
+        transform: translateX(-6px)
+  &.is-open
+    span
+      height: 0
+      &:before
+        top: 0
+        transform: rotate(45deg)
+      &:after
+        top: 0
+        transform: rotate(-45deg)
+  span
+    display: block
+    position: relative
+    width: 36px
+    height: 3px
+    background: #FFF
+    transition: background-color 300ms
+    &:before, &:after
+      content: ""
+      position: absolute
+      left: 0
+      width: 36px
+      height: 3px
+      background: #FFF
+      transition: top 300ms, transform 300ms, background-color 300ms
+    &:before
+      top: -9px
+    &:after
+      top: 9px
+  +r(1023)
+    display: block
+
+.lang
+  padding: 5px 0
+  color: #FFF
+  +r(1023)
+    margin-right: 20px
+
+.select-wrap
+  user-select: none
+  select
+    opacity: 0
+
+.select
+  position: relative
+  &::placeholder
+    font-size: 15px
+    font-weight: 400
+    line-height: 26px
+  &.opened
+    .select-trigger
+      color: transparent
+    .options
+      opacity: 1
+      visibility: visible
+      pointer-events: all
+  &.selected
+    .select-trigger
+      color: #FFF
+
+.select-trigger
+  position: relative
+  color: #FFF
+  cursor: pointer
+  transition: color 300ms
+  &:hover
+    &:before
+      left: -60px
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    left: -70px
+    transform: translate(0, -50%)
+    width: 50px
+    height: 2px
+    background-color: $brown
+    transition: left 300ms
+
+.options
+  position: absolute
+  display: block
+  top: -20px
+  left: -22px
+  min-width: 100%
+  padding: 5px 0
+  background-color: rgba(#000, 0.6)
+  transition: all .4s ease-in-out
+  opacity: 0
+  visibility: hidden
+  pointer-events: none
+  border-left: 2px solid $brown
+
+.option
+  position: relative
+  display: block
+  padding: 15px 20px
+  color: #FFF
+  cursor: pointer
+  transition: all .4s ease-in-out
+  &:hover
+    background-color: $brown

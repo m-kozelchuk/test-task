@@ -1,0 +1,193 @@
+// common styles here
+
+$gray: #333
+$brown: #85714c
+$l-brown: #b3a282
+$l-blue: #f0f8fb
+
+// fonts
++font(MullerRegular, MullerRegular)
+=reg
+  font-family: 'MullerRegular', Arial, sans-serif
+  //font-weight: 400
++font(MullerLight, MullerLight)
+=light
+  font-family: 'MullerLight', Arial, sans-serif
+  //font-weight: 300
++font(MullerBold, MullerBold)
+=bold
+  font-family: 'MullerBold', Arial, sans-serif
+  //font-weight: 700
++font(MullerExtraBold, MullerExtraBold)
+=extra
+  font-family: 'MullerExtraBold', Arial, sans-serif
+  //font-weight: 700
+
+
+.out
+  overflow: hidden
+
+body
+  font-size: 14px
+  letter-spacing: 2px
+  +bold
+
+a
+  text-decoration: none
+  transition: color 300ms
+
+h1
+  font-size: 72px
+  +r(1279)
+    font-size: 54px
+  +r(1023)
+    font-size: 48px
+  +r(420)
+    font-size: 30px
+h2
+  font-size: 48px
+  +r(1279)
+    font-size: 36px
+  +r(1023)
+    font-size: 30px
+  +r(420)
+    font-size: 22px
+h3
+  font-size: 36px
+  +r(1279)
+    font-size: 24px
+  +r(1023)
+    font-size: 18px
+  +r(420)
+    font-size: 16px
+h4
+  font-size: 24px
+  +r(1279)
+    font-size: 18px
+  +r(1023)
+    font-size: 14px
+
+img
+  width: 100%
+  max-width: 100%
+  height: auto
+
+.container
+  width: 100%
+  max-width: 1420px
+  margin: 0 auto
+  padding: 0 20px
+  +r(1480)
+    max-width: 1180px
+  +r(1279)
+    max-width: 100%
+
+// links
+.link
+  position: relative
+  display: inline-block
+  color: #FFF
+  letter-spacing: 2px
+  &:before
+    content: ''
+    position: absolute
+    background-color: #fff
+  &.link_more
+    margin-top: 20px
+    color: #000
+    text-transform: uppercase
+    &:hover
+      &:before
+        left: 130px
+    &:before
+      top: 50%
+      left: 150px
+      transform: translate(0, -50%)
+      width: 50px
+      height: 2px
+      background-color: #000
+      transition: left 300ms
+    +r(640)
+      margin: 0
+  &.link_next
+    position: absolute
+    left: 50%
+    bottom: 30px
+    padding: 20px
+    transform: translate(-50%, 0)
+    &:hover
+      &:before
+        top: -40px
+    &:before
+      top: -60px
+      left: 50%
+      transform: translate(-50%, 0)
+      width: 2px
+      height: 50px
+      transition: top 300ms
+    +r(1279)
+      bottom: 20px
+    +r(580)
+      bottom: 50px
+    +r(480)
+      display: none
+  &.link_works
+    text-transform: uppercase
+    &:hover
+      &:before
+        left: 145px
+    &:before
+      top: 50%
+      left: 165px
+      transform: translate(0, -50%)
+      width: 50px
+      height: 2px
+      transition: left 300ms
+
+.socials
+  a
+    display: inline-block
+    padding: 10px
+    margin: 0 25px
+    color: $gray
+    &:hover
+      color: $l-brown
+    +r(1023)
+      margin: 0
+
+
+// buttons
+.btn-wrap
+  text-align: center
+.btn
+  &.btn_start
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    width: 320px
+    height: 60px
+    background-color: $brown
+    color: #f4f8fa
+    line-height: 60px
+    text-transform: uppercase
+    letter-spacing: 2px
+    &:hover
+      &:before
+        transform: translateX(100%)
+      &:after
+        transform: translateX(-100%)
+    &:before, &:after
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%)
+      width: 20px
+      height: 1px
+      background-color: $brown
+      transition: transform 300ms
+    &:before
+      left: -20px
+    &:after
+      right: -20px
+    +r(400)
+      width: 80%

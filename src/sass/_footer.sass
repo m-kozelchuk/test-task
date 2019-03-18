@@ -1,0 +1,40 @@
+// footer styles
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  padding: 50px 100px
+  +r(1280)
+    padding: 20px
+  +r(767)
+    flex-wrap: wrap
+  +r(420)
+    flex-direction: column
+  .socials
+    +r(767)
+      order: 1
+      width: 100%
+      text-align: center
+      margin-bottom: 20px
+    +r(420)
+      margin-bottom: 10px
+
+.copyright
+  color: #ccc
+  +r(767)
+    order: 2
+    letter-spacing: 0
+  +r(420)
+    margin-bottom: 10px
+
+.createby
+  color: #D1D1D1
+  +r(767)
+    order: 3
+    letter-spacing: 0
+  a
+    color: $gray
+    text-transform: uppercase
+    &:hover
+      color: $brown

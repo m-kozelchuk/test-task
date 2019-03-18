@@ -1,0 +1,272 @@
+// styles
+.banner
+  position: relative
+  width: 100vw
+  height: 100vh
+  .link
+    z-index: 999
+  .socials
+    position: absolute
+    bottom: 50px
+    right: 0
+    padding: 10px 15px
+    z-index: 999
+    +r(1279)
+      bottom: 20px
+    +r(580)
+      display: none
+    a
+      color: #FFF
+      &:hover
+        color: $l-brown
+
+.wrapper
+  position: relative
+  padding: 75px 0
+  +r(1279)
+    padding: 20px 0
+
+.inner
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 55px 0
+  +r(1023)
+    padding: 20px 0
+  +r(640)
+    flex-direction: column
+    align-items: stretch
+  &.is-animate
+    .inner__text, .inner__img
+      transform: translate(0, 0)
+  .inner__text
+    flex-basis: 33.3333333333333%
+    color: $gray
+    transform: translate(0, 100%)
+    transition: transform 500ms
+    +r(640)
+      order: 1
+      padding-bottom: 20px
+    p
+      padding-bottom: 30px
+      line-height: 30px
+      font-size: 16px
+      letter-spacing: 0
+      +light
+      +r(1279)
+        line-height: 1.2
+      +r(1023)
+        padding-bottom: 10px
+  .inner__title
+    padding-bottom: 30px
+    +r(640)
+      padding-bottom: 10px
+  .inner__img
+    position: relative
+    flex-basis: 50%
+    transform: translate(0, 100%)
+    transition: transform 1500ms
+    +r(1023)
+      flex-basis: 60%
+    +r(640)
+      order: 2
+
+.about
+  padding-top: 90px
+  +r(1279)
+    padding-top: 50px
+  +r(1023)
+    padding-top: 20px
+  .inner
+    align-items: flex-start
+    +r(640)
+      align-items: stretch
+    .inner__title
+      padding-bottom: 50px
+      +r(1023)
+        padding-bottom: 20px
+    .inner__img
+      +r(1279)
+        margin-right: 4%
+      +r(1023)
+        margin: 0
+  .number
+    right: -160px
+    top: 50%
+    +r(1480)
+      right: -150px
+
+.about-img
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    bottom: -80px
+    right: -90px
+    width: 0
+    height: 0
+    border-top: 245px solid transparent
+    border-right: 300px solid $l-blue
+    border-bottom: 245px solid $l-blue
+    border-left: 300px solid transparent
+    z-index: -1
+    +r(1480)
+      bottom: -40px
+      right: -50px
+      border-width: 200px 250px
+    +r(1279)
+      bottom: -30px
+      right: -40px
+    +r(1023)
+      display: none
+  figcaption
+    position: absolute
+    top: -35px
+    right: 0
+    text-transform: uppercase
+    color: $gray
+    opacity: 0.5
+    text-align: right
+    +r(1023)
+      position: static
+      padding: 10px 0
+.about-years
+  position: absolute
+  left: -180px
+  bottom: 70px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 380px
+  height: 150px
+  border: 5px solid $brown
+  padding: 20px 20px 0 20px
+  color: $brown
+  text-transform: uppercase
+  +r(1279)
+    left: -22%
+    width: 52%
+  +r(1023)
+    display: none
+  span
+    font-size: 72px
+
+.services
+  +r(1279)
+    padding-bottom: 50px
+  .services__title
+    max-width: 45%
+    color: $gray
+    +r(1023)
+      max-width: 100%
+      padding-bottom: 20px
+      font-size: 36px
+    +r(420)
+      font-size: 30px
+  .number
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%) rotate(270deg)
+    +r(1480)
+      top: 51.5%
+
+.number
+  position: absolute
+  color: $gray
+  font-size: 24px
+  text-transform: uppercase
+  letter-spacing: 5px
+  transform: translate(0, -50%) rotate(270deg)
+  +light
+  +r(1023)
+    display: none
+  span
+    font-size: 150px
+    +bold
+
+.portfolio
+  position: relative
+  padding: 70px 0
+  background-color: $gray
+  color: #FFF
+  +r(1279)
+    padding: 50px 0
+  +r(1023)
+    padding: 20px 0
+  .portfolio__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 20px 0 100px
+    +r(1279)
+      padding-bottom: 20px
+    +r(640)
+      flex-direction: column
+      align-items: flex-start
+  .portfolio__title
+    flex-basis: 50%
+    line-height: 1
+  .portfolio__more
+    flex-basis: 33.333333%
+    +r(640)
+      margin-top: 20px
+  .bg-text
+    color: #363636
+    z-index: 0
+
+.contact
+  position: relative
+  padding-top: 50px
+  +r(1279)
+    padding-top: 0
+  .contact__title
+    padding: 50px 0
+    +r(767)
+      padding: 40px 0 20px
+  .contact__inn
+    padding: 190px 0
+    +r(1279)
+      padding: 150px 0
+    +r(767)
+      padding: 100px 0
+    +r(420)
+      padding: 40px 0
+
+.contacts
+  display: flex
+  justify-content: space-around
+  padding-bottom: 100px
+  +r(580)
+    padding-bottom: 80px
+    flex-direction: column
+    align-items: center
+    text-align: center
+  +r(420)
+    padding-bottom: 40px
+  .contacts__inn
+    +r(580)
+      padding-bottom: 20px
+    span
+      font-size: 18px
+      color: #999
+      +reg
+    a
+      display: block
+      color: $gray
+      font-size: 24px
+      line-height: 36px
+      &:hover
+        color: $brown
+
+.bg-text
+  position: absolute
+  top: 50%
+  left: 0
+  right: 0
+  transform: translate(0, -50%)
+  text-align: center
+  text-transform: uppercase
+  color: #FAFAFA
+  font-size: 250px
+  letter-spacing: 5px
+  z-index: -1

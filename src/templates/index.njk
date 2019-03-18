@@ -1,0 +1,198 @@
+---
+title: Template
+---
+
+{% extends "./layouts/_layout.njk" %}
+
+{% block content %}
+
+  <section class="banner">
+    <!-- header -->
+    {% include "partials/_header.njk" %}
+
+    <div class="slider slider_banner swiper-banner">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide-img">
+            <img src="img/main1.jpg" alt="">
+          </div>
+          <div class="slide-text">
+            <div class="container">
+              <h1>Красивые <br>
+                и функциональные <br>
+                интерьеры для квартир</h1>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-img">
+            <img src="img/portfolio.jpg" alt="">
+          </div>
+          <div class="slide-text">
+            <div class="container">
+              <h1>Красивые и функциональные <br>
+                интерьеры для квартир и </h1>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-img">
+            <img src="img/interior.jpg" alt="">
+          </div>
+          <div class="slide-text">
+            <div class="container">
+              <h1>Красивые <br>
+                и функциональные <br>
+                интерьеры для квартир</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <a href="#" class="link link_next">Подробней</a>
+    <div class="socials">
+      <a href="#" class="fb">Facebook</a>
+      <a href="#" class="insta">Instagram</a>
+    </div>
+  </section>
+
+  <section id="main">
+    <div class="container">
+      <div class="wrapper about">
+        <div class="inner js-block-animate">
+          <div class="inner__text">
+            <h2 class="inner__title">О компании</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" class="link link_more">Подробней</a>
+          </div>
+          <div class="inner__img">
+            <figure class="about-img">
+              <figcaption>Photo name</figcaption>
+              <img src="img/about.jpg" alt="">
+            </figure>
+            <div class="about-years">
+              <p>лет опыта</p>
+              <span>10</span>
+            </div>
+            <div class="number">
+              <p><span>01</span> / о нас</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-text" data-type="background" data-speed="30">о нас</div>
+      </div>
+      <div class="wrapper services">
+        <h2 class="services__title">Качественно выполним ваш проект</h2>
+        <div class="inner js-block-animate">
+          <div class="inner__img">
+            <img src="img/interior.jpg" alt="">
+          </div>
+          <div class="inner__text">
+            <h2 class="inner__title">Интерьеры</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a href="#" class="link link_more">Подробней</a>
+          </div>
+        </div>
+        <div class="inner js-block-animate">
+          <div class="inner__text">
+            <h2 class="inner__title">Архитектура</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a href="#" class="link link_more">Подробней</a>
+          </div>
+          <div class="inner__img">
+            <img src="img/architecture.jpg" alt="">
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <a href="#" class="btn btn_start">Начать проект</a>
+        </div>
+        <div class="number">
+          <p><span>02</span> / услуги</p>
+        </div>
+        <div class="bg-text" data-type="background" data-speed="40">услуги</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="container">
+      <div class="portfolio__top">
+        <h2 class="portfolio__title">В каждом проекте мы уделяем также много внимания проработке дизайну</h2>
+        <div class="portfolio__more">
+          <a href="#" class="link link_works">Больше работ</a>
+        </div>
+      </div>
+      <div class="slider slider_portfolio swiper-portfolio">
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-text">
+              <span>Интерьеры</span>
+              <h3>Дизайн спальной комнаты новостройки</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+              <a href="#" class="link">ПОДРОБНЕЕ</a>
+            </div>
+            <div class="slide-img">
+              <img src="img/portfolio.jpg" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-text">
+              <span>Интерьеры</span>
+              <h3>Дизайн спальной комнаты новостройки</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+              <a href="#" class="link">ПОДРОБНЕЕ</a>
+            </div>
+            <div class="slide-img">
+              <img src="img/main1.jpg" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-text">
+              <span>Интерьеры</span>
+              <h3>Дизайн спальной комнаты новостройки</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+              <a href="#" class="link">ПОДРОБНЕЕ</a>
+            </div>
+            <div class="slide-img">
+              <img src="img/interior.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+      </div>
+    </div>
+    <div class="bg-text" data-type="background" data-speed="60">портфолио</div>
+  </section>
+
+  <section class="contact" id="contacts">
+    <div class="container">
+      <h2 class="contact__title">У вас есть интересный проект? <br>
+        Давайте поговорим об этом!</h2>
+      <div class="contact__inn">
+        <div class="contacts">
+          <div class="contacts__inn">
+            <span>Номер:</span>
+            <a href="tel:+380931116666">+38 093 111 66 66</a>
+          </div>
+          <div class="contacts__inn">
+            <span>E-mail</span>
+            <a href="mailto:example@gmail.com">example@gmail.com</a>
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <a href="#" class="btn btn_start">Начать проект</a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-text" data-type="background" data-speed="80">контакты</div>
+    <!-- footer -->
+    {% include "partials/_footer.njk" %}
+  </section>
+
+{% endblock %}
+
+
